@@ -14,3 +14,7 @@ But first you need a settings.xml file with the following content:
 </settings>
 
 You can have multiple users and multiple synchronizers!
+
+See https://developers.facebook.com/docs/authentication/ for how to create an access token!
+You can also use http://developers.facebook.com/tools/explorer/
+
