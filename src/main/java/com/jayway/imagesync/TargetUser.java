@@ -12,9 +12,9 @@ import com.google.code.morphia.annotations.Id;
 import com.restfb.DefaultFacebookClient;
 import com.restfb.FacebookClient;
 
-@Entity
+@Entity(noClassnameStored=false, value="user")
 public class TargetUser {
-	@Id @XmlAttribute
+	@XmlAttribute
 	private final String userId;
 	@XmlAttribute
 	private final String accessToken;
