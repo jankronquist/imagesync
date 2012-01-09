@@ -59,7 +59,7 @@
 					<assembleDirectory>target</assembleDirectory>
 					<programs>
 						<program>
-							<mainClass>com.jayway.imagesync.PerfomSync</mainClass>
+							<mainClass>com.jayway.imagesync.PerformSync</mainClass>
 							<name>performsync</name>
 						</program>
 					</programs>
