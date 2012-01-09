@@ -18,3 +18,18 @@ You can have multiple users and multiple synchronizers!
 See https://developers.facebook.com/docs/authentication/ for how to create an access token!
 You can also use http://developers.facebook.com/tools/explorer/
 
+Deploying on Heroku
+-------------------
+
+See http://devcenter.heroku.com/articles/run-non-web-java-processes-on-heroku
+
+Add a scheduler "sh target/bin/performsync"
+
+Configure mongodb like this:
+
+> db.user.find();   
+{ "_id" : "userId", "accessToken" : "YOUR ACCESS TOKEN", "synchronizers" : [
+	{
+		"feedUrl" : "https://picasaweb.google.com/data/feed/base/YOURuser/someuser/albumid/YOURalbumId?alt=rss&kind=photo&hl=en_US"
+	}
+] }
