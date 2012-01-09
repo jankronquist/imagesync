@@ -11,6 +11,10 @@ public class Settings {
 	@XmlElement
 	private final List<TargetUser> users = new ArrayList<TargetUser>();
 	
+	public List<TargetUser> getUsers() {
+		return users;
+	}
+
 	public void add(TargetUser targetUser) {
 		users.add(targetUser);
 	}

@@ -6,15 +6,19 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 
+import com.google.code.morphia.annotations.Embedded;
+import com.google.code.morphia.annotations.Entity;
+import com.google.code.morphia.annotations.Id;
 import com.restfb.DefaultFacebookClient;
 import com.restfb.FacebookClient;
 
+@Entity
 public class TargetUser {
-	@XmlAttribute
+	@Id @XmlAttribute
 	private final String userId;
 	@XmlAttribute
 	private final String accessToken;
-	@XmlElement
+	@Embedded @XmlElement
 	private final List<FeedToSynchronize> synchronizers = new ArrayList<FeedToSynchronize>();
 	
 	private TargetUser() {
