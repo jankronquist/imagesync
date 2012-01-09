@@ -6,7 +6,7 @@ public class PerformSync {
 	public static void main(String[] args) throws Exception {
 		for (TargetUser user : getDatastore().find(TargetUser.class)) {
 			user.synchronize();
-			getDatastore().save(user);
+			getDatastore().merge(user);
 		}
 	}
 }
